@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Hotel Cats</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <a href="#" class="logo">
+            <img class="logo__image" src="./images/logo.svg" alt="" />
+          </a>
+          <nav class="nav nav_primary">
+            <a href="#" class="nav__link">Почему мы?</a>
+            <a href="#" class="nav__link">Номера</a>
+            <a href="#" class="nav__link">Отзывы</a>
+            <a href="#" class="nav__link">Как нас найти</a>
+          </nav>
+<!-- burger-->
+            <div class="burger hidden@s">
+              <div class="burger__button">
+                <button>
+                  <svg
+                    width="24"
+                    height="16"
+                    viewBox="0 0 24 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1H23M1 8H23M1 15H23"
+                      stroke="#1A212F"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+<!--burger menu-->
+              <div class="offcanvas">
+                <div class="offcanvas__header">
+                  <a href="#" class="logo">
+                    <img class="logo__image" src="./images/logo.svg" alt="" />
+                  </a>
+                  <button class="offcanvas__close">X</button>
+                </div>
+                <div class="offcanvas__body">
+                  <div class="offcanvas__nav">
+                    <a href="#" class="offcanvas__nav__link">Почему мы?</a>
+                    <a href="#" class="offcanvas__nav__link">Номера</a>
+                    <a href="#" class="offcanvas__nav__link">Отзывы</a>
+                    <a href="#" class="offcanvas__nav__link">Как нас найти</a>
+                  </div>
+                </div>
+                <div class="offcanvas__footer">
+                  <div class="phone"></div>
+                  <div class="socials">
+                    <a class="social" href="#">
+                      <svg class="icon icon-home icon-social">
+                        <use xlink:href="icons/SVG/symbol-defs.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                    <a class="social" href="#">
+                      <svg class="icon icon-home icon-social">
+                        <use
+                          xlink:href="icons/SVG/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                    <a class="social" href="#">
+                      <svg class="icon icon-home icon-social">
+                        <use xlink:href="icons/SVG/symbol-defs.svg#icon-vk"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </header>
+    <div class="heading">
+      <div class="container">
+        <div class="heading__container">
+          <div class="heading__start">
+            <h1>Наши номера</h1>
+          </div>
+           
+          <div class="heading__end">
+            <form class="heading__end__form">
+<!--filter-->
+               <div class="button_primary_filter hidden@m">
+                  <a href="#popup" class=""><span><svg
+                          width="12"
+                         height="15"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg"><path d="M4.5 8.68421L0 1.57895V0H12V1.57895L7.5 8.68421V13.4211L4.5 15V8.68421Z"fill="#1A212F"/>
+                       </svg></span>
+                  <span> Фильтр</span></a>
+                </div>
+              <div class="opshion">
+                  <select value="1">
+                    <option value="1">По площади</option>
+                    <option value="2">По цене</option>
+                  </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <section class="section section_products">
+        <div class="container">
+          <div class="layout layout_products">
+            <div class="layout_item">
+              <div class="filter">
+                <form action="#" class="filter__form" method="GET">
+                  <div class="filter__item">
+                    <span class="filter__label">Цена за сутки, ₽</span>
+                    <div class="filter__control">
+                      <div class="price">
+                        <input
+                          class="price__from"
+                          type="text"
+                          placeholder="от 100"
+                        />
+                        <input
+                          class="price__to"
+                          type="text"
+                          placeholder="до 600"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item">
+                    <span class="filter__label">Площадь</span>
+                    <p class="filter__control">
+                      <label
+                        ><input class="checkbox" type="checkbox" />0,63
+                        м2</label
+                      >
+                    </p>
+                    <p class="filter__control">
+                      <label
+                        ><input class="checkbox" type="checkbox" />0,90
+                        м2</label
+                      >
+                    </p>
+                    <p class="filter__control">
+                      <label
+                        ><input class="checkbox" type="checkbox" />1,13
+                        м2</label
+                      >
+                    </p>
+                    <p class="filter__control">
+                      <label
+                        ><input class="checkbox" type="checkbox" />1,56
+                        м2</label
+                      >
+                    </p>
+                    <p class="filter__control">
+                      <label
+                        ><input class="checkbox" type="checkbox" />2,56
+                        м2</label
+                      >
+                    </p>
+                    <p class="filter__control">
+                      <label
+                        ><input class="checkbox" type="checkbox" />2,88
+                        м2</label
+                      >
+                    </p>
+                  </div>
+
+                  <div class="filter__item">
+                    <span class="filter__label">Оснащение номера</span>
+                    <p class="filter__control">
+                      <label
+                        ><input class="checkbox" type="checkbox" />Пустой
+                        номер</label
+                      >
+                    </p>
+                    <p class="filter__control">
+                      <label
+                        ><input class="checkbox" type="checkbox" />Лежак</label
+                      >
+                    </p>
+                    <p class="filter__control">
+                      <label
+                        ><input
+                          class="checkbox"
+                          type="checkbox"
+                        />Когтеточка</label
+                      >
+                    </p>
+                    <p class="filter__control">
+                      <label
+                        ><input
+                          class="checkbox"
+                          type="checkbox"
+                        />Игровой-комплекс</label
+                      >
+                    </p>
+                    <p class="filter__control">
+                      <label
+                        ><input class="checkbox" type="checkbox" />Домик</label
+                      >
+                    </p>
+                  </div>
+
+                  <div class="filter__actions">
+                    <button class="button button_secondary" type="submit">
+                      Применить
+                    </button>
+                    <button class="button button_tertiary" type="reset">
+                      Сбросить фильтр
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="layout_item">
+              <div class="grid grid_products">
+                <div class="grid_item">
+                  <div class="card card_product">
+                    <div class="card__media">
+                      <img src="./images/cat1.jpg" alt="" class="card__image" />
+                    </div>
+                    <div class="card__body">
+                      <h3 class="card__title">Эконом</h3>
+                      <div class="cadr__params">
+                        <div class="card__param">
+                          Размеры (ШхГхВ) - 90х70х180см
+                        </div>
+                        <div class="card__param">Площадь - 0,63 м2</div>
+                        <div class="card__param">
+                          Оснащение номера
+                          <span class="card__features">
+                            <span class="card__feature">
+                              <svg class="icon icon-home" title="Пустой номер">
+                                <use
+                                  xlink:href="icons/SVG/symbol-defs.svg#icon-empty-room"
+                                  title="Пустой номер"
+                                ></use>
+                              </svg>
+                            </span>
+                          </span>
+                        </div>
+                        <span class="card__param"
+                          >Цена за сутки:
+                          <span class="card__price">100₽</span>
+                        </span>
+                      </div>
+                      <div class="card__actions">
+                        <a href="#" class="button button_primary button_block">
+                          Забронировать
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid_item">
+                  <div class="card card_product">
+                    <div class="card__media">
+                      <img src="./images/cat2.jpg" alt="" class="card__image" />
+                    </div>
+                    <div class="card__body">
+                      <h3 class="card__title">Эконом плюс</h3>
+                      <div class="cadr__params">
+                        <div class="card__param">
+                          Размеры (ШхГхВ) - 90х100х180см
+                        </div>
+                        <div class="card__param">Площадь - 0,90 м2</div>
+                        <div class="card__param">
+                          Оснащение номера
+                          <span class="card__features">
+                            <span class="card__feature">
+                              <svg class="icon icon-home">
+                                <use
+                                  xlink:href="icons/SVG/symbol-defs.svg#icon-sofa"
+                                ></use>
+                              </svg>
+                              <svg class="icon icon-home">
+                                <use
+                                  xlink:href="icons/SVG/symbol-defs.svg#icon-claw-point"
+                                ></use>
+                              </svg>
+                            </span>
+                          </span>
+                        </div>
+                        <span class="card__param"
+                          >Цена за сутки:
+                          <span class="card__price">200₽</span>
+                        </span>
+                      </div>
+                      <div class="card__actions">
+                        <a href="#" class="button button_primary button_block">
+                          Забронировать
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid_item">
+                  <div class="card card_product">
+                    <div class="card__media">
+                      <img src="./images/cat3.jpg" alt="" class="card__image" />
+                    </div>
+                    <div class="card__body">
+                      <h3 class="card__title">Комфорт</h3>
+                      <div class="cadr__params">
+                        <div class="card__param">
+                          Размеры (ШхГхВ) - 100х125х180см
+                        </div>
+                        <div class="card__param">Площадь - 1,13 м2</div>
+                        <div class="card__param">
+                          Оснащение номера
+                          <span class="card__features">
+                            <span class="card__feature">
+                              <svg class="icon icon-home">
+                                <use
+                                  xlink:href="icons/SVG/symbol-defs.svg#icon-sofa"
+                                ></use>
+                              </svg>
+                              <svg class="icon icon-home">
+                                <use
+                                  xlink:href="icons/SVG/symbol-defs.svg#icon-claw-point"
+                                ></use>
+                              </svg>
+                              <svg class="icon icon-home">
+                                <use
+                                  xlink:href="icons/SVG/symbol-defs.svg#icon-clew"
+                                ></use>
+                              </svg>
+                            </span>
+                          </span>
+                        </div>
+                        <span class="card__param"
+                          >Цена за сутки:
+                          <span class="card__price">250₽</span>
+                        </span>
+                      </div>
+                      <div class="card__actions">
+                        <a href="#" class="button button_primary button_block">
+                          Забронировать
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid_item">
+                  <div class="card card_product">
+                    <div class="card__media">
+                      <img src="./images/cat4.jpg" alt="" class="card__image" />
+                    </div>
+                    <div class="card__body">
+                      <h3 class="card__title">Сьют</h3>
+                      <div class="cadr__params">
+                        <div class="card__param">
+                          Размеры (ШхГхВ) - 125х125х180см
+                        </div>
+                        <div class="card__param">Площадь - 1,56 м2</div>
+                        <div class="card__param">
+                          Оснащение номера
+                          <span class="card__features">
+                            <span class="card__feature">
+                              <svg class="icon icon-home">
+                                <use
+                                  xlink:href="icons/SVG/symbol-defs.svg#icon-sofa"
+                                ></use>
+                              </svg>
+                              <svg class="icon icon-home">
+                                <use
+                                  xlink:href="icons/SVG/symbol-defs.svg#icon-claw-point"
+                                ></use>
+                              </svg>
+                              <svg class="icon icon-home">
+                                <use
+                                  xlink:href="icons/SVG/symbol-defs.svg#icon-clew"
+                                ></use>
+                              </svg>
+                            </span>
+                          </span>
+                        </div>
+                        <span class="card__param"
+                          >Цена за сутки:
+                          <span class="card__price">350₽</span>
+                        </span>
+                      </div>
+                      <div class="card__actions">
+                        <a href="#" class="button button_primary button_block">
+                          Забронировать
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid_item">
+                  <div class="card card_product">
+                    <div class="card__media">
+                      <img src="./images/cat5.jpg" alt="" class="card__image" />
+                    </div>
+                    <div class="card__body">
+                      <h3 class="card__title">Люкс</h3>
+                      <div class="cadr__params">
+                        <div class="card__param">
+                          Размеры (ШхГхВ) - 160х160х180см
+                        </div>
+                        <div class="card__param">Площадь - 2,56 м2</div>
+                        <div class="card__param">
+                          Оснащение номера
+                          <span class="card__features">
+                            <span class="card__feature">
+                              <svg class="icon icon-home">
+                                <use
+                                  xlink:href="icons/SVG/symbol-defs.svg#icon-sofa"
+                                ></use>
+                              </svg>
+                              <svg class="icon icon-home">
+                                <use
+                                  xlink:href="icons/SVG/symbol-defs.svg#icon-claw-point"
+                                ></use>
+                              </svg>
+                              <svg class="icon icon-home">
+                                <use
+                                  xlink:href="icons/SVG/symbol-defs.svg#icon-clew"
+                                ></use>
+                              </svg>
+                              <svg class="icon icon-home">
+                                <use
+                                  xlink:href="icons/SVG/symbol-defs.svg#icon-house"
+                                ></use>
+                              </svg>
+                            </span>
+                          </span>
+                        </div>
+                        <span class="card__param"
+                          >Цена за сутки:
+                          <span class="card__price">500₽</span>
+                        </span>
+                      </div>
+                      <div class="card__actions">
+                        <a href="#" class="button button_primary button_block">
+                          Забронировать
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid_item">
+                  <div class="card card_product">
+                    <div class="card__media">
+                      <img src="./images/cat6.jpg" alt="" class="card__image" />
+                    </div>
+                    <div class="card__body">
+                      <h3 class="card__title">Супер-Люкс</h3>
+                      <div class="cadr__params">
+                        <div class="card__param">
+                          Размеры (ШхГхВ) - 180х160х180см
+                        </div>
+                        <div class="card__param">Площадь - 2,88 м2</div>
+                        <div class="card__param">
+                          Оснащение номера
+                          <span class="card__features">
+                            <span class="card__feature">
+                              <svg class="icon icon-home">
+                                <use
+                                  xlink:href="icons/SVG/symbol-defs.svg#icon-sofa"
+                                ></use>
+                              </svg>
+                              <svg class="icon icon-home">
+                                <use
+                                  xlink:href="icons/SVG/symbol-defs.svg#icon-claw-point"
+                                ></use>
+                              </svg>
+                              <svg class="icon icon-home">
+                                <use
+                                  xlink:href="icons/SVG/symbol-defs.svg#icon-clew"
+                                ></use>
+                              </svg>
+                              <svg class="icon icon-home">
+                                <use
+                                  xlink:href="icons/SVG/symbol-defs.svg#icon-house"
+                                ></use>
+                              </svg>
+                            </span>
+                          </span>
+                        </div>
+                        <span class="card__param"
+                          >Цена за сутки:
+                          <span class="card__price">600₽</span>
+                        </span>
+                      </div>
+                      <div class="card__actions">
+                        <a href="#" class="button button_primary button_block">
+                          Забронировать
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section_banner">
+        <div class="container">
+          <div class="banner">
+            <div class="banner__body">
+              <div class="banner__content">
+                <h2 class="banner__title">
+                  Каждый 7-й день
+                  <span class="banner__title-large">бесплатно!</span>
+                </h2>
+                <p class="banner__description">
+                  Акция действует при размещении в номерах “Люкс” и “Супер-Люкс”
+                </p>
+                <div class="banner__actions">
+                  <a href="#" class="button button_primary button_inverse">
+                    Забронировать
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section_contacts">
+        <div class="container">
+          <div class="contacts">
+            <div class="contacts__body">
+              <h2 class="contacts__title">Как нас найти</h2>
+              <div class="contacts__items">
+                <div class="contacts__item">
+                  <div class="contacts__label">Адрес</div>
+                  <div class="contacts__text">
+                    Санкт-Петербург,<br />
+                    ул Большая Конюшенная, д 19
+                  </div>
+                </div>
+                <div class="contacts__item">
+                  <div class="contacts__label">Режим работы</div>
+                  <div class="contacts__text">Ежедневно, с 9:00 до 20:00</div>
+                </div>
+                <div class="contacts__item">
+                  <div class="contacts__label">Телефон</div>
+                  <div class="contacts__text">8 (800) 333-55-99</div>
+                </div>
+                <div class="contacts__item">
+                  <div class="contacts__label">E-mail</div>
+                  <div class="contacts__text">info@cat-hotel.ru</div>
+                </div>
+                <div class="contacts__item">
+                  <div class="contacts__label">Социальные сети</div>
+                  <div class="contacts__text">
+                    <div class="contacts__socials">
+                      <a class="contacts__social" href="#">
+                        <svg class="icon icon-home icon-social">
+                          <use
+                            xlink:href="icons/SVG/symbol-defs.svg#icon-facebook"
+                          ></use>
+                        </svg>
+                      </a>
+                      <a class="contacts__social" href="#">
+                        <svg class="icon icon-home icon-social">
+                          <use
+                            xlink:href="icons/SVG/symbol-defs.svg#icon-instagram"
+                          ></use>
+                        </svg>
+                      </a>
+                      <a class="contacts__social" href="#">
+                        <svg class="icon icon-home icon-social">
+                          <use
+                            xlink:href="icons/SVG/symbol-defs.svg#icon-vk"
+                          ></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__end">
+              <div class="map">
+                <img class="map__image" src="./images/map.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer__container">
+            <a href="#" class="logo">
+              <img class="logo__image" src="./images/logo.svg" alt="" />
+            </a>
+            <nav class="nav nav_primary">
+              <a href="#" class="nav__link">Почему мы?</a>
+              <a href="#" class="nav__link">Номера</a>
+              <a href="#" class="nav__link">Отзывы</a>
+              <a href="#" class="nav__link">Как нас найти</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer__container">
+            <p>© 2019 Все права защищены</p>
+            <p>Политика конфиденциальности</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+      <div id="popup" class="popup">
+          <div class="popup__body">
+              <div class="popup__content">
+                  <a href="#" class="popup__close">X</a>
+                  <div class="popup__title">----</div>
+                  <div class="popup__text">
+                    <div class="filter">
+                      <form action="#" class="filter__form" method="GET">
+                        <div class="filter__item">
+                          <span class="filter__label">Цена за сутки, ₽</span>
+                          <div class="filter__control">
+                            <div class="price">
+                              <input
+                                class="price__from"
+                                type="text"
+                                placeholder="от 100"
+                              />
+                              <input
+                                class="price__to"
+                                type="text"
+                                placeholder="до 600"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter__item">
+                          <span class="filter__label">Площадь</span>
+                          <p class="filter__control">
+                            <label
+                              ><input class="checkbox" type="checkbox" />0,63
+                              м2</label
+                            >
+                          </p>
+                          <p class="filter__control">
+                            <label
+                              ><input class="checkbox" type="checkbox" />0,90
+                              м2</label
+                            >
+                          </p>
+                          <p class="filter__control">
+                            <label
+                              ><input class="checkbox" type="checkbox" />1,13
+                              м2</label
+                            >
+                          </p>
+                          <p class="filter__control">
+                            <label
+                              ><input class="checkbox" type="checkbox" />1,56
+                              м2</label
+                            >
+                          </p>
+                          <p class="filter__control">
+                            <label
+                              ><input class="checkbox" type="checkbox" />2,56
+                              м2</label
+                            >
+                          </p>
+                          <p class="filter__control">
+                            <label
+                              ><input class="checkbox" type="checkbox" />2,88
+                              м2</label
+                            >
+                          </p>
+                        </div>
+      
+                        <div class="filter__item">
+                          <span class="filter__label">Оснащение номера</span>
+                          <p class="filter__control">
+                            <label
+                              ><input class="checkbox" type="checkbox" />Пустой
+                              номер</label
+                            >
+                          </p>
+                          <p class="filter__control">
+                            <label
+                              ><input class="checkbox" type="checkbox" />Лежак</label
+                            >
+                          </p>
+                          <p class="filter__control">
+                            <label
+                              ><input
+                                class="checkbox"
+                                type="checkbox"
+                              />Когтеточка</label
+                            >
+                          </p>
+                          <p class="filter__control">
+                            <label
+                              ><input
+                                class="checkbox"
+                                type="checkbox"
+                              />Игровой-комплекс</label
+                            >
+                          </p>
+                          <p class="filter__control">
+                            <label
+                              ><input class="checkbox" type="checkbox" />Домик</label
+                            >
+                          </p>
+                        </div>
+      
+                        <div class="filter__actions">
+                          <button class="button button_secondary" type="submit">
+                            Применить
+                          </button>
+                          <button class="button button_tertiary" type="reset">
+                            Сбросить фильтр
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+        <script>
+          document
+            .querySelector(".burger")
+            .addEventListener("click", function() {
+              document.querySelector(".offcanvas").classList.add("is-open");
+            });
+    
+          document
+            .querySelector(".offcanvas__close")
+            .addEventListener("click", function() {
+              document.querySelector(".offcanvas").classList.remove("is-open");
+            });
+        </script>
+  </body>
+</html>

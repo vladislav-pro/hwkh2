@@ -1,0 +1,100 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+canvas,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.layout {
+  display: flex;
+  margin: -45px;
+}
+
+.layout > * {
+  padding: 45px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.grid > * {
+  padding: 15px;
+}
+
+.card {
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+  border: 1px solid #e1e1e1;
+}
+
+.card__title {
+  font-size: 20px;
+}
+
+.card__body {
+  padding: 25px 20px;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: none;
+  font: inherit;
+  padding: 0;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  user-select: none;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  outline: none;
+}
+
+.button_block {
+  width: 100%;
+}
